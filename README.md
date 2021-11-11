@@ -37,7 +37,8 @@ still never called because the commit failure happens in the background.
 
 This flow has an extra stage added in, and would trigger the trace node if a commit 
 occurs in the callable flow as long as the flow is running in XA (coordinated transaction)
-mode. Without XA coordination, this flow behaves the same way as the 01 flow.
+mode. Without XA coordination, this flow behaves the same way as the 01 flow, but without
+XA coordination a mixed outcome (one committed and the other rolled back) is highly likely.
 
 ![02 flow](02-WithCallableFlow.png)
 
