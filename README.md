@@ -5,7 +5,7 @@ Projects to illustrate commit failure issues
 
 The flows use a JavaCompute node to access JDBC, so the flow will try to commit the
 JDBC changes (along with the MQPUT from the MQOutput node) when the flow ends. This
-would normally be successfuly, but if the flows are invoked with a query parameter of
+would normally be successful, but if the flows are invoked with a query parameter of
 "fail=true" then the Java code does
 ```
 if ( fail )
